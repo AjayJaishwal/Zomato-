@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato</title>
+    <style>
+      /* Write all styles here  */
+      *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      }
+      .nav{
+        display:flex;
+        justify-content:space-between;
+        /* border:2px solid black; */
+        height:70px;
+        margin:auto;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+      .nav div{
+        display:flex;
+        /* border:2px solid black; */
+        width:60%;
+        justify-content:space-evenly;
+        height:%;
+        margin:auto;
+        color:blue;
+
+      }
+      .nav p{
+        font-size: 1rem;
+      }
+
+      .nav h1{
+        /* border:2px solid black; */
+        color:red;
+        margin:auto;
+      }
+
+      .nav button{
+        height:50px;
+        margin:auto;
+        background-color: red;
+        color:white;
+        border:none;
+        padding:5px;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .top{
+        width:90%;
+        margin:auto;
+        margin-top: 10px;
+      }
+
+      .elem{
+        display:flex;
+        /* border:2px solid black; */
+        justify-content:space-between;
+        padding-top: 20px;
+      }
+
+     .elem div img{
+        width:100%;
+        padding-bottom:10px;
+        
+      }
+      .mid{
+        width:90%;
+        margin:auto;
+        margin-top: 20px;
+
+      }
+
+      .mid-elem{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        padding-top: 20px;
+        /* border: 2px solid black; */
+        gap:20px 20px;
+
+      }
+
+      .mid-elem div{
+        padding:10px;
+        /* border: 2px solid black; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+      }
+
+      .mid-elem div h3{
+        text-align: center;
+      }
+
+      .mid-elem div button{
+        color:blue;
+        border:none;
+        margin-left:40%;
+        background: none;
+      }
+
+      .mid-elem div img{
+        width:100%;
+      }
+
+      .bottom{
+        width:90%;
+        margin:auto;
+        margin-top: 10px;
+      }
+
+      .bottom h1{
+        text-align: center;
+        margin-top:30px;
+      }
+
+      .works{
+        display:flex;
+        /* border:2px solid black; */
+        justify-content:space-between;
+        padding-top: 20px;
+      }
+      .works div{
+        /* border:2px solid black; */
+      }
+
+      .works div h3{
+        position:relative;
+        left:50%;
+      }
+
+      .works div img{
+        /* border:2px solid black; */
+        position:relative;
+        left:50%;
+      }
+
+      .works div p{
+        text-align:center;
+      }
+
+
+
+
+
+
+
+      
+
+      @media only screen and (max-width: 800px) {
+        .mid-elem{
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .elem{
+          flex-direction: column;
+        }
+
+        .elements{
+          display:none;
+        }
+        .nav div{
+          display:none;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        /* Small Screen  */
+        .mid-elem{
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .elem{
+          flex-direction: column;
+        }
+
+        .works{
+          flex-direction:column;
+        }
+
+        .nav div{
+          display:none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <!-- Create the Navbar Here  -->
+      <h1>Zomato</h1>
+      <div class="elements">
+        <p>MENU</p>
+        <p>STORES</p>
+        <p>GIFT CARD</p>
+        <p>CONTACT</p>
+      </div>
+      <button>DOWNLOAD APP</button>
+      
+    </div>
+    <div class="top">
+      <h1>Order</h1>
+      <div class="elem">
+        <!-- Use flex to achieve the layout  -->
+        <!-- Here we will have 3 child divs -->
+        <div>
+          <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*" alt="">
+          <h3>Order Online</h3>
+          <p>Stay home & order to your doorsteps</p>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*" alt="">
+          <h3>Dining</h3>
+          <p>Stay home & order to your doorsteps</p>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*" alt="">
+          <h3>Nightlife & Clubs</h3>
+          <p>Stay home & order to your doorsteps</p>
+        </div>
+      </div>
+    </div>
+    <div class="mid">
+      <h1>Our products</h1>
+      <div class="mid-elem">
+        <!-- Here will be 6 child divs -->
+        <!-- Use Grid to achieve the layout  -->
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png" alt="">
+          <h3>Listing</h3>
+          <button>Learn More</button>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png" alt="">
+          <h3>Order Online</h3>
+          <button>Learn More</button>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png" alt="">
+          <h3>Pro</h3>
+          <button>Learn More</button>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png" alt="">
+          <h3>Advertising</h3>
+          <button>Learn More</button>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png" alt="">
+          <h3>Events</h3>
+          <button>Learn More</button>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png" alt="">
+          <h3>Hyperpure</h3>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <h1>How it works</h1>
+      <div class="works">
+        <!-- Use flex to achieve the layout  -->
+        <!-- Here we will have 3 child divs -->
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/efdd6ac0cd160a46c97ad58d9bbd73fd1600699950.png" alt="">
+          <h3>Step 1</h3>
+          <p>Create your page on Zomato</p>
+          <p>Help users discover your place by creating a Listing
+            on <br> Zomato
+          </p>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/efdd6ac0cd160a46c97ad58d9bbd73fd1600699950.png" alt="">
+          <h3>Step 2</h3>
+          <p>Create your page on Zomato</p>
+          <p>Help users discover your place by creating a Listing
+            on <br>Zomato
+          </p>
+        </div>
+        <div>
+          <img src="https://b.zmtcdn.com/merchant-onboarding/efdd6ac0cd160a46c97ad58d9bbd73fd1600699950.png" alt="">
+          <h3>Step 3</h3>
+          <p>Create your page on Zomato</p>
+          <p>Help users discover your place by creating a Listing
+            on <br>Zomato
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
